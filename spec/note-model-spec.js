@@ -11,6 +11,11 @@ function testNoteStoresNote() {
   assert.isTrue(note.getText() === 'My favourite language is JavaScript');
 };
 
+function testNoteID() {
+  var note = new Note("I'm new, look at me!!!");
+  assert.isTrue(note.getID() == 1, "note id test");
+}
+
 function testNoteListStoresNote() {
   var noteList = new NoteList();
   noteList.addNote("note 1")
@@ -31,7 +36,6 @@ function testNoteListViewOutputsHTML() {
   noteList.addNote("Favourite drink: seltzer")
   var noteListView = new NoteListView(noteList);
   var text = 'Favourite drink: seltzer'.substring(0,20)
-  console.log(text)
   var string1 = `<ul><li><div>${text}</div></li></ul>`
   assert.isTrue(noteListView.displayView() === string1,"noteListView.displayView() === string1")
 }
@@ -53,6 +57,7 @@ function testNoteListViewOutputsHTMLmanynote() {
 
 
 testNoteStoresNote();
+testNoteID();
 testNoteListStoresNote();
 testNoteListStoresNoteListModel();
 testNoteListViewOutputsHTML();
