@@ -1,6 +1,6 @@
 (function(exports) {
   function Note(string) {
-    // if (typeof noteNumber === 'undefined') {noteNumber = 0}
+    // if (typeof noteNumber === 'undefined') {noteNumber = 0} !How to set as 0 at the start of the run!
     this.text = string;
     // this.id = noteNumber;
     // noteNumber ++;
@@ -15,5 +15,5 @@
   };
 
   exports.Note = Note;
-  // exports.noteNumber = noteNumber
+  // exports.noteNumber = noteNumber !How to update the noteNumber!
 })(this);
