@@ -15,7 +15,6 @@ function testNoteListStoresNote() {
   var noteList = new NoteList();
   noteList.addNote("note 1")
   noteList.addNote("note 2")
-  // console.log(noteList.getNotes()[0].text)
   assert.isTrue(noteList.getNotes()[0].text === "note 1");
   assert.isTrue(noteList.getNotes()[1].text === "note 2");
 };
@@ -31,14 +30,26 @@ function testHtmlViewOutputsHTML() {
   var noteList = new NoteList();
   noteList.addNote("Favourite drink: seltzer")
   var htmlView = new HtmlView(noteList);
-
-  // var noteList2 = new NoteList();
-  // var modelHtml2 = new HtmlView(noteList2);
   assert.isTrue(htmlView.displayView() === '<ul><li><div>Favourite drink: seltzer</div></li></ul>')
-  // assert.isTrue(htmlView2.displayView() === null)
 }
+function testHtmlViewOutputsHTML0note() {
+  var noteList = new NoteList();
+  var htmlView = new HtmlView(noteList);
+  assert.isTrue(htmlView.displayView() === '')
+}
+function testHtmlViewOutputsHTMLmanynote() {
+  var noteList = new NoteList();
+  noteList.addNote("Favourite drink: seltzer")
+  noteList.addNote("eeck, need a test")
+  var htmlView = new HtmlView(noteList);
+  var string = '<ul><li><div>Favourite drink: seltzer</div></li></ul><ul><li><div>eeck, need a test</div></li></ul>'
+  assert.isTrue(htmlView.displayView() === string)
+}
+
 
 testNoteStoresNote();
 testNoteListStoresNote();
 testNoteListStoresNoteListModel();
 testHtmlViewOutputsHTML();
+testHtmlViewOutputsHTML0note();
+testHtmlViewOutputsHTMLmanynote();
