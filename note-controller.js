@@ -1,7 +1,6 @@
 
 (function(exports) {
   function NoteController(noteList) {
-    noteList.addNote('Favourite drink: seltzer')
     this.noteListView = new NoteListView(noteList)
   };
 
@@ -11,5 +10,3 @@
 
   exports.NoteController = NoteController;
 })(this);
-noteController = new NoteController(noteList = new NoteList)
-noteController.displayHtml()
