@@ -1,19 +1,16 @@
 (function(exports) {
   function NoteListApp() {
     this.notesArray = [];
-    this.noteApp = null;
+    // this.noteApp = null;
   };
 
   NoteListApp.prototype.addNote = function(note) {
-    this.notesArray.push(note)
+    newnote = new NoteApp(note);
+    this.notesArray.push(newnote)
   };
 
-  NoteListApp.prototype.notes = function() {
+  NoteListApp.prototype.getNotes = function() {
     return this.notesArray;
-  }
-
-  NoteListApp.prototype.createSingleNote = function(note) {
-    this.noteApp = new NoteApp(note);
   }
 
   exports.NoteListApp = NoteListApp;

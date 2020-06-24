@@ -15,27 +15,27 @@ function testNoteListAppStoresNote() {
   var noteListApp = new NoteListApp();
   noteListApp.addNote("note 1")
   noteListApp.addNote("note 2")
-  assert.isTrue(noteListApp.notes()[0] === "note 1");
-  assert.isTrue(noteListApp.notes()[1] === "note 2");
+  console.log(noteListApp.getNotes()[0].text)
+  assert.isTrue(noteListApp.getNotes()[0].text === "note 1");
+  assert.isTrue(noteListApp.getNotes()[1].text === "note 2");
 };
 
 function testNoteListAppStoresNoteListModel() {
   var noteListApp = new NoteListApp();
-  noteListApp.createSingleNote("Favourite drink: seltzer")
+  noteListApp.addNote("Favourite drink: seltzer")
 
-  assert.isTrue(noteListApp.noteApp.note() === "Favourite drink: seltzer")
+  assert.isTrue(noteListApp.getNotes()[0].note() === "Favourite drink: seltzer")
 }
 
 function testModelViewOutputsHTML() {
   var noteListApp = new NoteListApp();
+  noteListApp.addNote("Favourite drink: seltzer")
   var modelView = new ModelView(noteListApp);
-  
-  var noteListApp2 = new NoteListApp();
-  var modelView2 = new ModelView(noteListApp2);
 
-  noteListApp.createSingleNote("Favourite drink: seltzer")
+  // var noteListApp2 = new NoteListApp();
+  // var modelView2 = new ModelView(noteListApp2);
   assert.isTrue(modelView.displayView() === '<ul><li><div>Favourite drink: seltzer</div></li></ul>')
-  assert.isTrue(modelView2.displayView() === null)
+  // assert.isTrue(modelView2.displayView() === null)
 }
 
 testNoteAppStoresNote();
