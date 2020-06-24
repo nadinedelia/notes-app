@@ -4,10 +4,19 @@ function noteControllerInstantiated() {
   assert.isTrue(noteController);
 };
 
+(function(exports) {
+  function NoteListView() {
+  }
+  NoteListView.prototype.displayView = function() {
+    return '<ul><li><div>Favourite drink: seltzer</div></li></ul>'
+  }
+
+  exports.NoteListView = NoteListView
+})(this);
+
 function noteControllerOutput() {
-  var noteList = new NoteList();
-  noteList.addNote("Favourite drink: seltzer")
-  var noteController = new NoteController(noteList);
+  var noteListDouble
+  var noteController = new NoteController(noteListDouble);
   noteController.displayHtml()
   var string = '<ul><li><div>Favourite drink: seltzer</div></li></ul>'
   assert.isTrue(document.getElementById("app").innerHTML = string);
