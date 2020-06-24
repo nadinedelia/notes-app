@@ -1,11 +1,11 @@
 // Takes a note list model upon instantiation
 
 (function(exports) {
-  function HtmlView(noteList) {
+  function NoteListView(noteList) {
     this.noteList = noteList;
   };
 
-  HtmlView.prototype.displayView = function() {
+  NoteListView.prototype.displayView = function() {
     // if (this.noteList.Note == null) {
     //   return null;
     // } else {
@@ -15,5 +15,5 @@
       return output
   };
 
-  exports.HtmlView = HtmlView;
+  exports.NoteListView = NoteListView;
 })(this);

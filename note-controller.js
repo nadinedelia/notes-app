@@ -2,11 +2,11 @@
 (function(exports) {
   function NoteController(noteList) {
     noteList.addNote('Favourite drink: seltzer')
-    this.htmlView = new HtmlView(noteList)
+    this.noteListView = new NoteListView(noteList)
   };
 
   NoteController.prototype.displayHtml = function() {
-    document.getElementById("app").innerHTML = this.htmlView.displayView();
+    document.getElementById("app").innerHTML = this.noteListView.displayView();
   };
 
   exports.NoteController = NoteController;
