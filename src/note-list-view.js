@@ -11,7 +11,7 @@
     // } else {
       var notearray = this.noteList.getNotes();
       output = ''
-      notearray.forEach (function(note) { output += `<ul><li><div>${note.getText()}</div></li></ul>` })
+      notearray.forEach (function(note) { output += `<ul><li><div>${note.getText().substring(0,20)}</div></li></ul>` })
       return output
   };
 

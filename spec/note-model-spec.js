@@ -30,7 +30,9 @@ function testNoteListViewOutputsHTML() {
   var noteList = new NoteList();
   noteList.addNote("Favourite drink: seltzer")
   var noteListView = new NoteListView(noteList);
-  var string1 = '<ul><li><div>Favourite drink: seltzer</div></li></ul>'
+  var text = 'Favourite drink: seltzer'.substring(0,20)
+  console.log(text)
+  var string1 = `<ul><li><div>${text}</div></li></ul>`
   assert.isTrue(noteListView.displayView() === string1,"noteListView.displayView() === string1")
 }
 function testNoteListViewOutputsHTML0note() {
@@ -43,7 +45,9 @@ function testNoteListViewOutputsHTMLmanynote() {
   noteList.addNote("Favourite drink: seltzer")
   noteList.addNote("eeck, need a test")
   var noteListView = new NoteListView(noteList);
-  var string2 = '<ul><li><div>Favourite drink: seltzer</div></li></ul><ul><li><div>eeck, need a test</div></li></ul>'
+  var text1 = "Favourite drink: seltzer".substring(0,20);
+  var text2 = "eeck, need a test".substring(0,20)
+  var string2 = `<ul><li><div>${text1}</div></li></ul><ul><li><div>${text2}</div></li></ul>`
   assert.isTrue(noteListView.displayView() === string2,"noteListView.displayView() === string2")
 }
 
