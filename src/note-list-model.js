@@ -1,22 +1,22 @@
 (function(exports) {
-  function NoteListApp() {
+  function NoteList() {
     this.notesArray = [];
-    // this.noteApp = null;
+    // this.Note = null;
   };
 
-  NoteListApp.prototype.addNote = function(note) {
-    newnote = new NoteApp(note);
+  NoteList.prototype.addNote = function(note) {
+    newnote = new Note(note);
     this.notesArray.push(newnote)
   };
 
-  NoteListApp.prototype.getNotes = function() {
+  NoteList.prototype.getNotes = function() {
     return this.notesArray;
   }
 
-  exports.NoteListApp = NoteListApp;
+  exports.NoteList = NoteList;
 })(this);
 
-// class NoteListApp {
+// class NoteList {
 //    constructor() {
 //      this.notesArray = [];
 //    }

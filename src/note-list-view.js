@@ -1,21 +1,19 @@
 // Takes a note list model upon instantiation
 
 (function(exports) {
-  function ModelView(noteListApp) {
-    this.noteListApp = noteListApp;
+  function HtmlView(noteList) {
+    this.noteList = noteList;
   };
 
-  ModelView.prototype.displayView = function() {
-    // if (this.noteListApp.noteApp == null) {
+  HtmlView.prototype.displayView = function() {
+    // if (this.noteList.Note == null) {
     //   return null;
     // } else {
-      var notearray = this.noteListApp.getNotes();
-      console.log(notearray)
-      var newarray = notearray.map(function(note) {
-      return note.text })
-      console.log(newarray)
-      return `<ul><li><div>${newarray}</div></li></ul>`;
+      var notearray = this.noteList.getNotes();
+      output = ''
+      notearray.forEach (function(note) { output += `<ul><li><div>${note.getText()}</div></li></ul>` })
+      return output
   };
 
-  exports.ModelView = ModelView;
+  exports.HtmlView = HtmlView;
 })(this);
