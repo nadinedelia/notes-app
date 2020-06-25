@@ -1,7 +1,7 @@
 (function (exports) {
   function NoteController(noteList) {
     this.noteList = new NoteList();
-    this.noteList.addNote('Beer n Wine n BBQ');
+    this.noteList.addNote('Beer n Wine n BBQ n sun n fun');
     this.noteList.addNote('Beer BBQ');
 
     console.log(this.noteList.notesArray);
@@ -24,7 +24,9 @@ window.addEventListener(`DOMContentLoaded`, function (event) {
   console.log(controller.noteList.getNotes());
 
     window.addEventListener("hashchange", function() {
-    var split = window.location.hash.slice("#")[6];
+    var id = window.location.hash.slice("#")[6];
+    controller.noteList.getNotes()[id]
+    console.log(controller.noteList.getNotes()[id])
     });
 
 });
