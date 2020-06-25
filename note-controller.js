@@ -21,12 +21,12 @@ window.addEventListener(`DOMContentLoaded`, function (event) {
   document.getElementById(
     'app'
   ).innerHTML = controller.noteListView.displayView();
-  console.log(controller.noteList.getNotes());
+  // console.log(controller.noteList.getNotes());
 
-    window.addEventListener("hashchange", function() {
-    var id = window.location.hash.slice("#")[6];
-    controller.noteList.getNotes()[id]
-    console.log(controller.noteList.getNotes()[id])
-    });
-
+  window.addEventListener('hashchange', function () {
+    var id = window.location.hash.slice('#')[6];
+    var object = controller.noteList.getNotes()[id];
+    var singleNoteView = new SingleNote(object);
+    document.getElementById('app').innerHTML = singleNoteView.getHtml();
+  });
 });
