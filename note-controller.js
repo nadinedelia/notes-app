@@ -29,4 +29,10 @@ window.addEventListener(`DOMContentLoaded`, function (event) {
     var singleNoteView = new SingleNote(object);
     document.getElementById('app').innerHTML = singleNoteView.getHtml();
   });
+
+  document.getElementById('text').addEventListener('submit', function(event){
+  event.preventDefault();
+  console.log(event)
+  })
+
 });
