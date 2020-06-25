@@ -11,6 +11,7 @@
   };
 
   NoteList.prototype.getNotes = function() {
+    console.log(this.notesArray)
     return this.notesArray;
   }
 

@@ -6,9 +6,6 @@
   };
 
   NoteListView.prototype.displayView = function() {
-    // if (this.noteList.Note == null) {
-    //   return null;
-    // } else {
       var notearray = this.noteList.getNotes();
       output = '<ul>'
       notearray.forEach (function(note) { output += `<li><div>${note.getText().substring(0,20)}</div></li>` })
