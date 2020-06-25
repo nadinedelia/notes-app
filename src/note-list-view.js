@@ -6,14 +6,12 @@
   }
 
   NoteListView.prototype.displayView = function () {
-    console.log(this.noteList.getNotes());
     var notearray = this.noteList.getNotes();
     output = '<ul>';
     notearray.forEach(function (note) {
-      output += `<li><div>${note.getText().substring(0, 20)}</div></li>`;
+      output += `<li><a href='#note/${note.getID()}'><div>${note.getText().substring(0, 20)}</div></li>`;
     });
     output += '</ul>';
-    console.log(output);
     return output;
   };
 

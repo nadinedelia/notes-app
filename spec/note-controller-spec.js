@@ -1,5 +1,5 @@
 function noteControllerInstantiated() {
-  var noteList = new NoteList
+  var noteList = new NoteList()
   var noteController = new NoteController(noteList);
   assert.isTrue(noteController);
 };

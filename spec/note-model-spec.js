@@ -33,12 +33,11 @@ function testNoteListStoresNoteListModel() {
 
 function testNoteListViewOutputsHTML() {
   var noteList = new NoteList();
-  noteList.addNote("Favourite drink: seltzer")
-  var noteListView = new NoteListView(noteList);
-  var text = 'Favourite drink: seltzer'.substring(0,20)
-  var string1 = `<ul><li><div>${text}</div></li></ul>`
+  var controller = new NoteController(noteList);
+  console.log(controller.noteListView.displayView());
   assert.isTrue(noteListView.displayView() === string1,"noteList disp. Html")
 }
+
 function testNoteListViewOutputsHTML0note() {
   var noteList = new NoteList();
   var noteListView = new NoteListView(noteList);
