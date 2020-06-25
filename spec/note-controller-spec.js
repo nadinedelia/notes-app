@@ -21,7 +21,10 @@ function noteControllerOutput() {
   var string = '<ul><li><div>Favourite drink: sel</div></li></ul>'
   assert.isTrue(document.getElementById("app").innerHTML === string);
 };
-
+// 
+// function hashChangeEvents() {
+//
+// }
 
 noteControllerInstantiated();
 noteControllerOutput();

@@ -22,4 +22,9 @@ window.addEventListener(`DOMContentLoaded`, function (event) {
     'app'
   ).innerHTML = controller.noteListView.displayView();
   console.log(controller.noteList.getNotes());
+
+    window.addEventListener("hashchange", function() {
+    var split = window.location.hash.slice("#")[6];
+    });
+
 });
