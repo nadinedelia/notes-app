@@ -32,7 +32,7 @@ window.addEventListener(`DOMContentLoaded`, function (event) {
 
   document.getElementById('text').addEventListener('submit', function(event){
   event.preventDefault();
-  console.log(event)
+  console.log(document.getElementById('text').elements[0].value)
   })
 
 });
