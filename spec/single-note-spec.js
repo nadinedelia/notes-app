@@ -8,7 +8,7 @@ function singleNoteOutput() {
   var note = new Note('Favourite drink: seltzer')
   var singleNote = new SingleNote(note);
   var string = '<div>Favourite drink: seltzer</div>'
-  assert.isTrue(singleNote.getHtml() === string, 'singleNote.getHtml');
+  assert.isTrue(singleNote.getHtml() === string, 'html disp. single note');
 };
 
 singleNoteObjectTest()

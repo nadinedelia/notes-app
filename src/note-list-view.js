@@ -10,8 +10,10 @@
     //   return null;
     // } else {
       var notearray = this.noteList.getNotes();
-      output = ''
-      notearray.forEach (function(note) { output += `<ul><li><div>${note.getText().substring(0,20)}</div></li></ul>` })
+      output = '<ul>'
+      notearray.forEach (function(note) { output += `<li><div>${note.getText().substring(0,20)}</div></li>` })
+      output += "</ul>"
+      console.log(output)
       return output
   };
 
