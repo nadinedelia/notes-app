@@ -1,10 +1,10 @@
 // Takes a note list model upon instantiation
-
 (function (exports) {
   function NoteListView(noteList) {
     this.noteList = noteList;
   }
 
+// returns a string of HTML that represents the note list model
   NoteListView.prototype.displayView = function () {
     var notearray = this.noteList.getNotes();
     output = '<ul>';

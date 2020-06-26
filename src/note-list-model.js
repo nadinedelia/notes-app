@@ -17,6 +17,8 @@
   exports.NoteList = NoteList;
 })(this);
 
+
+
 // class NoteList {
 //    constructor() {
 //      this.notesArray = [];
@@ -26,7 +28,7 @@
 //      this.notesArray.push(note)
 //    }
 //
-//    notes() {
+//    getNotes() {
 //      return this.notesArray
 //    };
 // };

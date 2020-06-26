@@ -4,6 +4,8 @@ function noteControllerInstantiated() {
   assert.isTrue(noteController);
 };
 
+
+// MOCKING
 (function(exports) {
   function NoteListView() {
   }
@@ -13,6 +15,8 @@ function noteControllerInstantiated() {
 
   exports.NoteListView = NoteListView
 })(this);
+// MOCKING OVER
+
 
 function noteControllerOutput() {
   var noteListDouble
@@ -21,7 +25,7 @@ function noteControllerOutput() {
   var string = '<ul><li><div>Favourite drink: sel</div></li></ul>'
   assert.isTrue(document.getElementById("app").innerHTML === string);
 };
-// 
+//
 // function hashChangeEvents() {
 //
 // }
