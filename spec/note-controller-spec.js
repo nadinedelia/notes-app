@@ -6,14 +6,14 @@ function noteControllerInstantiated() {
 
 
 // MOCKING
-(function(exports) {
-  function NoteListView() {
-  }
-  NoteListView.prototype.displayView = function() {
-    return "<ul><li><a href=\"#note/0\"><div>it's friday yeah!</div></li></ul>"
-  }
-  exports.NoteListView = NoteListView
-})(this);
+// (function(exports) {
+//   function NoteListView() {
+//   }
+//   NoteListView.prototype.displayView = function() {
+//     return "<ul><li><a href=\"#note/0\"><div>it's friday yeah!</div></li></ul>"
+//   }
+//   exports.NoteListView = NoteListView
+// })(this);
 // MOCKING OVER
 
 

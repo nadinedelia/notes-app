@@ -1,7 +1,8 @@
 function testNoteListViewOutputsHTML() {
   var noteList = new NoteList();
+  noteList.addNote("it's friday yeah!")
   var noteListView = new NoteListView(noteList);
-  var string = "<ul><li><a href=\"#note/0\"><div>it's friday yeah!</div></li></ul>"
+  var string = "<ul><li><a href=\'#note/0\'><div>it's friday yeah!</div></li></ul>"
   assert.isTrue(noteListView.displayView() === string)
 }
 
@@ -22,7 +23,7 @@ function testNoteListViewOutputsHTMLmanynote() {
   var noteListView = new NoteListView(noteList);
   var text1 = "Favourite drink: seltzer".substring(0,20);
   var text2 = "eeck, need a test".substring(0,20)
-  var string = `<ul><li><div><a href=\"#note/0\"${text1}</div></li><li><div><a href=\"#note/1\"${text2}</div></li></ul>`
+  var string = `<ul><li><a href=\'#note/0\'><div>${text1}</div></li><li><a href=\'#note/1\'><div>${text2}</div></li></ul>`
   assert.isTrue(noteListView.displayView() === string,"html disp. many notes")
 }
 

@@ -1,6 +1,6 @@
 (function (exports) {
   function NoteController(noteList) {
-    this.noteList = new NoteList();
+    this.noteList = noteList;
 
 // Creates a note list view, passing in the note list model.
     this.noteListView = new NoteListView(this.noteList);
@@ -14,4 +14,3 @@
 
   exports.NoteController = NoteController;
 })(this);
-
