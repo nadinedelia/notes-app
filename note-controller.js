@@ -6,7 +6,6 @@
 
 
 // Creates a note list view, passing in the note list model.
-    console.log(this.noteList.notesArray);
     this.noteListView = new NoteListView(this.noteList);
   }
 
@@ -33,10 +32,15 @@ window.addEventListener(`DOMContentLoaded`, function (event) {
 // change content of app element to be HTML for that note
   window.addEventListener('hashchange', function () {
     var id = window.location.hash.slice('#')[6];
+    // getNote is method in NoteList to get notes from array
     var object = controller.noteList.getNotes()[id];
+
     var singleNoteView = new SingleNote(object);
+    // singleNoteView now basically had everything in it that we need
+    // getHtml is method that renders single note HTML without shortening
     document.getElementById('app').innerHTML = singleNoteView.getHtml();
   });
+
 
 // stops the form being submitted when a submit event is triggered.
   document.getElementById('text').addEventListener('submit', function(event){

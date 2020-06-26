@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Notes App</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
 
   <script src="src/note-model.js"></script>
   <script src="src/note-list-model.js"></script>
@@ -14,15 +17,33 @@
 </head>
 <body>
 
-  <div id='app'> hello </div>
+<div class="container center-align">
+  <br>
+  <br>
+  <br>
+<div class="card-panel">
+
+<br>
+<h2>Notes App</h2>
+<br>
+<br>
+  <div id='app'> your html isn't working if you see this </div>
+  <br>
+  <br>
 
   <form id=text action="/beer" method="post">
-  <h3>Submit a new note here: <h3>
-  <textarea value='' id="textarea" name="textarea" rows="4" cols="30">
+  <p>Submit a new note here: </p>
+
+  <textarea value='' id="textarea" name="textarea" style="width:60%">
   </textarea>
+
   <br> <br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" class="btn">
   </form>
+  <br>
+  <br>
+</div>
+</div>
 
 </body>
  <script src="note-controller.js"></script>

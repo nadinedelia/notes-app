@@ -12,20 +12,32 @@
   <script src="src/note-list-view.js"></script>
   <script src="src/single-note.js"></script>
 
-<!-- Test -->
-  <script src="spec/assert.js"></script>
-  <script src="spec/note-controller-spec.js"></script>
-  <script src="spec/single-note-spec.js"></script>
-  <script src="spec/note-model-spec.js"></script>
-  <script src="spec/note-list-spec.js"></script>
-  <script src="spec/note-view-spec.js"></script>
-
 
 </head>
 <body>
 
+  <h1>Notes App</h1>
   <div id='app'> I'm a Test. You fail. </div>
 
+  <form id=text action="/beer" method="post">
+  <h3>Submit a new note here: <h3>
+  <textarea value='' id="textarea" name="textarea" rows="4" cols="30">
+  </textarea>
+  <br> <br>
+  <input type="submit" value="Submit">
+  </form>
+
 </body>
-  <script src="note-controller.js"></script>
+
+<script src="note-controller.js"></script>
+
+<!-- Test -->
+<script src="spec/assert.js"></script>
+<script src="spec/note-controller-spec.js"></script>
+<script src="spec/single-note-spec.js"></script>
+<script src="spec/note-model-spec.js"></script>
+<script src="spec/note-list-spec.js"></script>
+<script src="spec/note-view-spec.js"></script>
+<script src="spec/id-spec.js"></script>
+
 </html>

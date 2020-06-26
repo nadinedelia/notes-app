@@ -10,19 +10,19 @@ function noteControllerInstantiated() {
   function NoteListView() {
   }
   NoteListView.prototype.displayView = function() {
-    return '<ul><li><div>Favourite drink: sel</div></li></ul>'
+    return "<ul><li><a href=\"#note/0\"><div>it's friday yeah!</div></li></ul>"
   }
-
   exports.NoteListView = NoteListView
 })(this);
 // MOCKING OVER
 
 
 function noteControllerOutput() {
-  var noteListDouble
-  var noteController = new NoteController(noteListDouble);
+  var noteList = new NoteList()
+  noteList.addNote("it's friday yeah!")
+  var noteController = new NoteController(noteList);
   noteController.displayHtml()
-  var string = '<ul><li><div>Favourite drink: sel</div></li></ul>'
+  var string = "<ul><li><a href=\"#note/0\"><div>it's friday yeah!</div></a></li></ul>"
   assert.isTrue(document.getElementById("app").innerHTML === string);
 };
 //
