@@ -3,4 +3,4 @@
 Pure Vanilla JS Frontend App
 
 ### Check it out here:
-vanillanotes.surge.sh
+http://vanillanotes.surge.sh
